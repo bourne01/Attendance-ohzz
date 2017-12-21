@@ -1,0 +1,62 @@
+logo{
+    padding-top:47px;
+}
+.logo img {
+    display:block;
+     margin:0 auto;
+     margin-bottom:9px;
+}
+.login-wrap{
+    width:360px;
+    height:350px;
+    border:1px #cccccc solid;
+    margin:0 auto;
+    border-radius:5px;
+}
+.login-wrap ul{
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+.login-wrap li{
+    margin:0px;
+    padding:0px;
+    width:89.5px;
+    float:left;
+    height:6px;
+}
+.color-bar-1{
+    border-top-left-radius: 4.5px;
+    background-color:#358ede;
+}
+.color-bar-2{
+    background-color:#5fb2f2;
+}
+.color-bar-3{
+    background-color:#3dc894;
+}
+.color-bar-4{
+    border-top-right-radius: 4.5px;
+    background-color:#ff7e68;
+}
+.login-wrap h2{
+    color:#358ede;
+    margin-top:22px;
+    margin-bottom:24px;
+}
+.login-wrap .input-group{
+    margin:0 40px 20px; 
+}
+.login-wrap .checkbox{   
+    margin:0 40px;
+    }
+.login-wrap .btn-wrap {   
+    margin:30px 40px 0 40px;
+    
+    }
+.checkbox a{
+    float:right;
+}
+.tips{
+    margin-top:5px;
+}
