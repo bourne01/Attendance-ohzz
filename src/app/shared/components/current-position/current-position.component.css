@@ -1,0 +1,15 @@
+ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+i{
+    display: inline-block;
+    height:18px;
+    width:18px;
+    margin-right:2px;
+    background: url(/assets/imgs/nav-icons.png) no-repeat;
+    position: relative;
+    top:2px;
+    background-position: -152px 0;
+}

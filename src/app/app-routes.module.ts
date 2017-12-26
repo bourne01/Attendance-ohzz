@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LeaveManageComponent } from './leave/leave-manage/leave-manage.component';
+import { AttendanceComponent } from './attendance/attendance/attendance.component';
+import { AppComponent } from './app.component';
 
 export const appRoutes:Routes = [
   {
@@ -13,11 +16,27 @@ export const appRoutes:Routes = [
   },
   {
     path:'login',
-    component:LoginComponent
+    component:LoginComponent  
   },
   {
     path:'home',
     component:HomeComponent
+  },
+  {
+    path:'app',
+    component:AppComponent
+  },
+  {
+    path:'leave',
+    component:LeaveManageComponent
+  },
+  {
+    path:'attendance',
+    loadChildren:'app/attendance/attendance.module#AttendanceModule'
+  },
+  {
+    path:'swap',
+    loadChildren:'app/swap/swap.module#SwapModule'
   },
   {
     path:'**',
@@ -30,7 +49,7 @@ export const appRoutes:Routes = [
     CommonModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } )
+      /* { enableTracing: true } */ )
   ],
   exports:[
     RouterModule

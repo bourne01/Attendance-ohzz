@@ -1,37 +1,39 @@
 <div class="nav-side">
-  <a ui-sref="home" >
-    <div class='nav-item'  id="home">
-      <!--<a ui-sref="home"><img src="imgs/index-side.jpg">首页</a>-->
-      <img src="{{imgHome}}">首页
+  <a [routerLink]="['/home']" >
+    <div class='nav-item' id="home" (click)="onClick('home')">
+      <i [class.home-visited]="isHomeVisited"></i>
+      <span [class.nav-text]="!isHomeVisited">首页</span>
     </div>
   </a>
-  <a ui-sref="leave">
-    <div class="nav-item"  id="leave" >
-      <!--<a ui-sref="leave"><img src="imgs/leave.jpg">请假管理</a>-->
-      <img src="{{imgLeave}}">请假管理
+  <a [routerLink]="['/leave']"  >
+    <div class="nav-item" id="leave" (click)="onClick('leave')">
+      <i [class.leave-visited]="isLeaveVisited"></i>
+      <span [class.nav-text]="isLeaveVisited">请假管理</span>
     </div>
   </a>
   <div class="attendance">
-      <div class="nav-item {{attTextStyle}}" id="attendance">
-          <!--<img id="att.img" src="imgs/att.jpg">考勤<img id="menu.img" class="dropdown" src="imgs/down-menu.png">-->
-          <img id="att.img" src="{{imgAtt}}">考勤<img id="menu.img" class="dropdown" src="{{imgDropMenu}}">
+      <div class="nav-item" id="attendance" (click)="menuDownUP()">
+          <i [class.attendance-visited]="isAttVisited"></i>考勤<img id="menu.img" class="dropdown" [src]="isExpand?'assets/imgs/down-menu.png':'assets/imgs/up-menu.png'">
       </div>
-      <ul>
-          <a ui-sref="attmanage">
-            <li  id="attmanage" class="{{attManageTextStyle}}">考勤管理</li>
+      <ul [style.display]="isExpand?'none':'block'">
+          <a [routerLink]="['/attendance/att-manage']" id="attmanage">
+            <li [class.attendance-text]="isAttManageVisited"  (click)="onClick('att-manage')">考勤管理</li>
           </a>
-          <a ui-sref="attreport">
-            <li  id="attreport" class="{{attReportTextStyle}}">考勤报告</li>
+          <a [routerLink]="['/attendance/att-report']" id="attreport">
+            <li [class.attendance-text]="isAttReportVisited"  (click)="onClick('att-report')">考勤报告</li>
           </a>
       </ul>
   </div>
-  <a ui-sref="swapleave" >
-    <div class="nav-item"  id="swapleave"  >
-      <!--<a ui-sref="swapleave"> <img src="imgs/swap-leave.jpg">调休</a>-->
-       <img src="{{imgSwapLeave}}">调休
+  <a [routerLink]="['/swap/swap-leave']" id="swapleave">
+    <div class="nav-item"  (click)="onClick('swap-leave')">
+       <i [class.swap-leave]="isSwapLeaveVisited" ></i>       
+       <span [class.nav-text]="isSwapLeaveVisited">调休</span>
     </div>
   </a>
-  <a ui-sref="swapclass"><div class="nav-item"  id="swapclass" >
-     <img src="{{imgSwapClass}}" >调代课
-  </div></a>
+  <a [routerLink]="['/swap/swap-class']" id="swapclass">
+    <div class="nav-item" (click)="onClick('swap-class')">
+      <i [class.swap-class]="isSwapClassVisited"></i>
+      <span [class.nav-text]="isSwapClassVisited">调代课</span>
+    </div>
+</a>
 </div>

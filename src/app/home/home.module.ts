@@ -1,19 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CurrentPositionComponent } from './current-position/current-position.component';
-import { HomeComponent } from './home.component';
-import { HeaderComponent } from '../shared/components/header/header.component';
-import { NavbarSideComponent } from '../shared/components/navbar-side/navbar-side.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
-  declarations: [
-    CurrentPositionComponent,
-    HeaderComponent,
-    NavbarSideComponent,
-    HomeComponent,
+  declarations: [    
+        
   ]
 })
 export class HomeModule { }

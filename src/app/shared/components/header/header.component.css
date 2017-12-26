@@ -2,9 +2,8 @@ header{
     background-color:#358ede;
 }
 .head{
-    width:1000px;
-    margin:0 auto;
-    
+    width:80%;
+    margin:0 auto;    
     height:80px;
     line-height: 80px;
 }
@@ -32,15 +31,12 @@ header{
     padding-left:0px;
     
 }
-.head .pull-left{
-    padding-right:0px;
-}
 .container{
-    width:1000px;
     padding:0px;
 }
 .head a{
-    display: block;
+    display: inline-block;
+    height:80px;
 }
 .head h5{
     margin:0;
