@@ -2,3 +2,9 @@
     width:80%;
     margin:0 auto;
 }
+div.left{
+    padding-left:0;
+}
+div.right{
+    padding:0;
+}

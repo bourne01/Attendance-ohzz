@@ -1,8 +1,39 @@
-<ul>
-  <li *ngIf="isHome">
-    <a [routerLink]="['/home']"><i></i>首页</a>>>考勤课表
-  </li>
-  <li *ngIf="isLeave">
-      <a [routerLink]="['/home']"><i></i>首页</a>>>请假管理
+<div class="current-position">
+  <ul>
+    <!--首页当前位置-->
+    <li *ngIf="isHome">
+      <a [routerLink]="['/home']"><i></i>首页</a>>>考勤课表
     </li>
-</ul>
+    <li *ngIf="isClassAttendance">
+      <a [routerLink]="['/home']"><i></i>首页>>考勤课表>></a>课堂考勤
+    </li> 
+    <!-- 请假管理当前位置 -->
+    <li *ngIf="isLeave">
+        <a [routerLink]="['/home']"><i></i>首页</a>>>请假管理
+    </li>
+    <li *ngIf="isLeaveNote">
+        <a [routerLink]="['/home']"><i></i>首页</a>>><a [routerLink]="['/leave']">请假管理</a>>>请假登记
+    </li>
+    <!-- 考勤当前位置 -->
+    <li *ngIf="isAttendanceManage">
+        <a [routerLink]="['/home']"><i></i>首页</a>>><a [routerLink]="['/att-manage']">考勤</a>>>考勤管理
+    </li>
+    <li *ngIf="isAttendanceReport">
+        <a [routerLink]="['/home']"><i></i>首页</a>>><a [routerLink]="['/att-report']">考勤</a>>>考勤报告
+    </li>
+    <!-- 调休当前位置-->
+    <li *ngIf="isSwapLeave">
+        <a [routerLink]="['/home']"><i></i>首页</a>>>调休
+    </li>
+    <li *ngIf="isSwapLeaveNote">
+        <a [routerLink]="['/home']"><i></i>首页</a>>><a [routerLink]="['/swap-leave']">调休</a>>>调休登记
+    </li>
+    <!-- 调代课当前位置 -->
+    <li *ngIf="isSwapClass">
+        <a [routerLink]="['/home']"><i></i>首页</a>>>调休
+    </li>
+    <li *ngIf="isSwapClassNote">
+        <a [routerLink]="['/home']"><i></i>首页</a>>><a [routerLink]="['/swap-class']">调代课</a>>>调代课登记
+    </li>
+  </ul>
+</div>

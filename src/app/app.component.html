@@ -1,9 +1,12 @@
 <app-header></app-header>
-<div class="content">
-    <app-navbar-side></app-navbar-side>
-    <div style="float:left">
-        <!-- <app-current-position></app-current-position> -->
-        <router-outlet></router-outlet>
+<div class="container content">
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 left">
+            <app-navbar-side></app-navbar-side>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-10 right">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </div>
 
