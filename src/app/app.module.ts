@@ -22,6 +22,7 @@ import { AttendanceManageComponent } from './attendance/attendance-manage/attend
 import { AttendanceReportComponent } from './attendance/attendance-report/attendance-report.component';
 import { SwapLeaveComponent } from './swap/swap-leave/swap-leave.component';
 import { SwapClassComponent } from './swap/swap-class/swap-class.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -44,10 +45,11 @@ import { SwapClassComponent } from './swap/swap-class/swap-class.component';
   imports: [
     BrowserModule,
     HomeModule,
+    HttpClientModule,
     LeaveModule,
     AttendanceModule,
     SwapModule,    
-    AppRoutesModule
+    AppRoutesModule,  
   ],
   providers: [],
   bootstrap: [AppComponent]

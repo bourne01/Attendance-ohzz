@@ -1,10 +1,10 @@
 <div class="current-position">
   <ul>
     <!--首页当前位置-->
-    <li *ngIf="isHome">
+    <li *ngIf="isHome || isClassAttendance">
       <a [routerLink]="['/home']"><i></i>首页</a>>>考勤课表
     </li>
-    <li *ngIf="isClassAttendance">
+    <li *ngIf="">
       <a [routerLink]="['/home']"><i></i>首页>>考勤课表>></a>课堂考勤
     </li> 
     <!-- 请假管理当前位置 -->
