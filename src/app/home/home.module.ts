@@ -6,6 +6,7 @@ import { AttListComponent } from './class-schedule/att-list/att-list.component';
 import { AttSeatComponent } from './class-schedule/att-seat/att-seat.component';
 import { ClassScheduleComponent } from './class-schedule/class-schedule.component';
 import { ClassScheduleService } from './class-schedule/class-schedule.service';
+import { ClassBackgroundDirective } from './class-schedule/class-background.directive';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import { ClassScheduleService } from './class-schedule/class-schedule.service';
     ClassScheduleComponent,
     AttListComponent,
     AttSeatComponent,    
-    
+    ClassBackgroundDirective
   ],
   providers:[
     ClassScheduleService,

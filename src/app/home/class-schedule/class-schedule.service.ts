@@ -10,6 +10,5 @@ export class ClassScheduleService {
   getSchedule(){
     console.log(this.scheduleURL);
     return this.http.get(this.scheduleURL)
-    )
   }
 }
