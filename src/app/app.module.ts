@@ -23,6 +23,7 @@ import { AttendanceReportComponent } from './attendance/attendance-report/attend
 import { SwapLeaveComponent } from './swap/swap-leave/swap-leave.component';
 import { SwapClassComponent } from './swap/swap-class/swap-class.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ToCnNumberPipe } from './shared/pipes/to-cn-number.pipe';
 
 
 @NgModule({

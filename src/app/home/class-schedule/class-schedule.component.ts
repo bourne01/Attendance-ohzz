@@ -13,10 +13,10 @@ export class ClassScheduleComponent implements OnInit {
   ngOnInit() {
     this.scheduleService.getSchedule().subscribe(
       data => {
-        let scheduleLength = data["lineSched"].length;
+        let scheduleLength = data["lineSched"].length;        
         let _scheduleList:string[] = [];
         /*把接受到JSON数据转换成为课程表*/
-        for(let i=0;i<7;i++)//7为一个星期七天
+        for(let i=0;i<8;i++)//每天总共8节课
           for(let j=0;j<scheduleLength;j++){
               if(j%8 == i)//记录每天第i节课的信息
                 _scheduleList.push(data["lineSched"][j]);         
@@ -25,6 +25,7 @@ export class ClassScheduleComponent implements OnInit {
                 _scheduleList = [];  
               }                                     
           }
+          console.log(this.scheduleList)
       },
       error => console.log(error)
     )

@@ -14,7 +14,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let scheduleDayList of scheduleList;let i=index ;">
-        <th class="first-col">第{{i}}节</th>
+        <th class="first-col">第{{i|toCnNumber}}节</th>
         <td *ngFor="let scheduleDay of scheduleDayList;let j=index;">
             <div class="class-outer" [style.display]="scheduleDay[0]?'block':'none'">
                 <a [routerLink]="['/home/att-seat']" [class.class-inner]="scheduleDay[0]" classSequence={{i*7+j}} courseName={{scheduleDay[1]}} appClassBackground>
