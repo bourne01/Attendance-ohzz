@@ -31,10 +31,17 @@ export class ClassBackgroundDirective {
     if( colorIndex > 7){
       colorIndex = 0;
     }
-    let _courseName = JSON.parse(sessionStorage.getItem(this.classSequence.toString()))[0];
-    if(_courseName == this.courseName)
-      console.log(_courseName);
-    this.element.style.backgroundColor = this.defaultColorList[colorIndex]; 
+    let lastCourseName:string;
+    let lastIndex:number;
+    if(this.classSequence > 6 && sessionStorage.getItem((this.classSequence - 7).toString())){
+      console.log(!sessionStorage.getItem((this.classSequence - 7).toString()));
+      lastCourseName = JSON.parse(sessionStorage.getItem((this.classSequence - 7).toString()))[0];
+      lastIndex = parseInt(JSON.parse(sessionStorage.getItem((this.classSequence - 7).toString()))[1])
+      if(lastCourseName == this.courseName)
+        this.element.style.backgroundColor = this.defaultColorList[lastIndex];
+    }else{
+      this.element.style.backgroundColor = this.defaultColorList[colorIndex]; 
+    }    
     courseList.push(this.courseName);
     courseList.push(colorIndex.toString());
     sessionStorage.setItem(this.classSequence.toString(),JSON.stringify(courseList));
