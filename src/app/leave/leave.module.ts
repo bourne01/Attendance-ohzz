@@ -3,14 +3,21 @@ import { CommonModule } from '@angular/common';
 import { LeaveManageComponent } from './leave-manage/leave-manage.component';
 import { LeaveNoteComponent } from './leave-note/leave-note.component';
 import { LeaveSearchComponent } from './leave-search/leave-search.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   declarations: [
+    LeaveManageComponent,
     LeaveNoteComponent, 
-    LeaveSearchComponent,   
+    LeaveSearchComponent,
+       
+  ],
+  exports:[
+    //LeaveManageComponent
   ]
 })
 export class LeaveModule { }

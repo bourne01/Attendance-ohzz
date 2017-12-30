@@ -13,7 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { LeaveManageComponent } from './leave/leave-manage/leave-manage.component';
 import { NavbarSideComponent } from './shared/components/navbar-side/navbar-side.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { CurrentPositionComponent } from './shared/components/current-position/current-position.component';
+//import { CurrentPositionComponent } from './shared/components/current-position/current-position.component';
 import { AttendanceModule } from './attendance/attendance.module';
 import { AttendanceComponent } from './attendance/attendance/attendance.component';
 import { SwapModule } from './swap/swap.module';
@@ -23,7 +23,6 @@ import { AttendanceReportComponent } from './attendance/attendance-report/attend
 import { SwapLeaveComponent } from './swap/swap-leave/swap-leave.component';
 import { SwapClassComponent } from './swap/swap-class/swap-class.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ToCnNumberPipe } from './shared/pipes/to-cn-number.pipe';
 
 
 @NgModule({
@@ -31,17 +30,18 @@ import { ToCnNumberPipe } from './shared/pipes/to-cn-number.pipe';
     AppComponent,
     LoginComponent,
     PageNotFoundComponent,
-    HomeComponent,
-    CurrentPositionComponent,
-    LeaveManageComponent,
-    AttendanceComponent,
-    SwapComponent,    
+    //HomeComponent,
+    //CurrentPositionComponent,
+    //LeaveManageComponent,
+    //AttendanceComponent,
+    //SwapComponent,    
     NavbarSideComponent,
     HeaderComponent,
-    AttendanceManageComponent,
-    AttendanceReportComponent,
-    SwapLeaveComponent, 
-    SwapClassComponent  
+    //AttendanceManageComponent,
+    //AttendanceReportComponent,
+    //SwapLeaveComponent, 
+    //SwapClassComponent,
+      
   ],
   imports: [
     BrowserModule,

@@ -69,7 +69,6 @@ div#attendance{
     list-style-type: none;
 }
 .attendance li{
-    padding-left:30px;
     margin:0;
     height:52px;
     line-height: 52px;

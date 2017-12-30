@@ -29,8 +29,20 @@ export class CurrentPositionComponent implements OnInit {
       case 'class-schedule':
         this.isClassAttendance = true;
         break;
+      case 'att-manage':
+        this.isAttendanceManage = true;
+        break;
+      case 'att-report':
+        this.isAttendanceReport = true;
+        break;
       case 'leave':
         this.isLeave = true;
+        break;
+      case 'swap-leave':
+        this.isSwapLeave = true;
+        break;
+      case 'swap-class':
+        this.isSwapClass = true;
         break;
     }
   }

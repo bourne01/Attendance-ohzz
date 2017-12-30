@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./leave-manage.component.css']
 })
 export class LeaveManageComponent implements OnInit {
-
+  private x:number = 1;
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

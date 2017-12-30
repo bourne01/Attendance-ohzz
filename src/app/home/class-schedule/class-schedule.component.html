@@ -18,9 +18,9 @@
         <td *ngFor="let scheduleDay of scheduleDayList;let j=index;">
             <div class="class-outer" [style.display]="scheduleDay[0]?'block':'none'">
                 <a [routerLink]="['/home/att-seat']" [class.class-inner]="scheduleDay[0]" classSequence={{i*7+j}} courseName={{scheduleDay[1]}} appClassBackground>
-                  <p>{{scheduleDay[0]}}</p><!--授课班级名称-->
-                  <p>{{scheduleDay[1]}}</p><!--授课课程-->
-                  <p>@{{scheduleDay[2]}}</p><!--授课教室-->
+                  <p>{{scheduleDay[0]|substring}}</p><!--授课班级名称-->
+                  <p>{{scheduleDay[1]|substring}}</p><!--授课课程-->
+                  <p>@{{scheduleDay[2]|substring}}</p><!--授课教室-->
                 </a>              
             </div>
         </td>
