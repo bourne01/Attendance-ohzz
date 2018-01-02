@@ -9,6 +9,7 @@ import { ClassScheduleService } from './class-schedule/class-schedule.service';
 import { ClassBackgroundDirective } from './class-schedule/class-background.directive';
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home.component';
+import { ClassInfoComponent } from './class-schedule/class-info/class-info.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { HomeComponent } from './home.component';
   ],
   declarations: [
     ClassScheduleComponent,
+    ClassInfoComponent,
     AttListComponent,
     AttSeatComponent,
     HomeComponent,        
