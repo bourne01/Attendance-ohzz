@@ -1,4 +1,31 @@
 <div class="class-info">
-    <div class="current-class">当前课堂信息：周{{weekday|toCnNumber}}|</div>
-    <div class="attendance-detail">考勤详情：</div>
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="current-class">当前课堂信息：周{{weekday|toCnNumber}}|</div>
+                <div class="attendance-detail">考勤详情：</div>
+                <div class="btn-wrap">
+                    <button class="btn btn-default full-att">
+                        <img src="assets/imgs/full-att.png">全勤
+                    </button>
+                    <a class="btn btn-default list-mode" [routerLink]="['../att-seat']" [style.display]="isListMode?'inline-block':'none'">
+                        <img src="assets/imgs/list.png">列表模式
+                    </a>
+                    <a class="btn btn-default seat-mode" [routerLink]="['../att-list']" [style.display]="isSeatMode?'inline-block':'none'">
+                            <img src="assets/imgs/list.png">座位模式
+                    </a>
+                    <button class="btn btn-default save-seat" [style.display]="isSeatMode?inline-'block':'none'">
+                        <img src="assets/imgs/save.png">保存座位
+                    </button>
+                </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <button class="btn btn-default refresh"><img src="assets/imgs/refresh.png">刷新</button>
+        </div>
+    </div>
+    
+</div>
+<div>
+        <div pDraggable="dd" draggable="true">Draggable Div</div>
+
+<div pDroppable="dd" droppable="true">Droppable Div</div>
 </div>

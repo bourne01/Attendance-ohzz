@@ -1,0 +1,14 @@
+.btn-wrap .btn{
+    margin-right:15px;
+}
+.full-att{
+    background-color: rgb(53, 224, 96);
+    color:#fff;
+}
+.list-mode,.seat-mode{
+    background-color: rgb(0, 162, 255);
+    color:#fff;
+}
+img{
+    margin-right:5px;
+}
