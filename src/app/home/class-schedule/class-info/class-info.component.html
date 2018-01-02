@@ -25,7 +25,7 @@
     
 </div>
 <div>
-        <div pDraggable="dd" draggable="true">Draggable Div</div>
+<div pDraggable="dssd" draggable="true" class="drag" (onDragStart)="dragStart($event,'car')">Draggable Div</div>
 
-<div pDroppable="dd" droppable="true">Droppable Div</div>
+<div pDroppable="dssd" class="drop" (onDrop)="onDrop($event)">{{drop}}Droppable Div</div>
 </div>

@@ -12,3 +12,11 @@
 img{
     margin-right:5px;
 }
+.drag{
+    height:100px;
+    border:1px solid red;
+}
+.drop{
+    height:100px;
+    border:1px solid blue;
+}

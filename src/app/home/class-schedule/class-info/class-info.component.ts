@@ -12,6 +12,8 @@ export class ClassInfoComponent implements OnInit {
   private isSeatMode:boolean = false;
   private weekday:string;
   private classSeq:string;
+  private drag:string;
+  private drop:string;
   constructor(private activatedRoute:ActivatedRoute,private router:Router) { }
 
   ngOnInit() {
@@ -37,6 +39,14 @@ export class ClassInfoComponent implements OnInit {
     this.weekday = routeParams.weekday;
     this.classSeq = routeParams.classSeq;
 
-  }  
+  }
+  dragStart(event,s:string){
+    this.drag = s;
+    console.log(this.drag);
+  }
+  onDrop(event){
+    this.drop = this.drag;
+    console.log(this.drop);
+  } 
 
 }

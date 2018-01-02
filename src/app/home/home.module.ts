@@ -10,12 +10,14 @@ import { ClassBackgroundDirective } from './class-schedule/class-background.dire
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home.component';
 import { ClassInfoComponent } from './class-schedule/class-info/class-info.component';
+import { DragDropModule } from 'primeng/primeng';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     SharedModule,
+    DragDropModule,
     HomeRoutesModule
   ],
   exports:[
