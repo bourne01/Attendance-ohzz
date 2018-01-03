@@ -1,0 +1,24 @@
+.classroom{
+    padding:20px;
+}
+td{
+    padding:0;
+}
+.student{
+    text-align: center;
+    width:80%;
+    
+}
+.student .name{
+    background-color: #337ab7;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color:#fff;
+}
+.student .no{
+    background-color: #e3eef7;
+}
+select.form-control{
+    padding:0px;
+    height:30px!important;
+}

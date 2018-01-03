@@ -1,1 +1,23 @@
 <app-class-info></app-class-info>
+<div class="classroom">
+  <table class="table">
+    <tr *ngFor="let studentGroup of studentsList">
+      <td *ngFor="let student of studentGroup">
+        <div class="student">
+          <div class="name">{{student.stuName}}</div>
+          <div class="no">{{student.stuNO}}</div>
+          <div class="att-action">
+            <select class="form-control">
+              <option>正常</option>
+              <option>迟到</option>
+              <option>严重迟到</option>
+              <option>旷课</option>
+              <option>早退</option>
+            </select>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div class="teach-stage"></div>
+</div>
