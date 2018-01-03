@@ -6,14 +6,16 @@
         <div class="student">
           <div class="name">{{student.stuName}}</div>
           <div class="no">{{student.stuNO}}</div>
-          <div class="att-action">
-            <select class="form-control">
-              <option>正常</option>
-              <option>迟到</option>
-              <option>严重迟到</option>
-              <option>旷课</option>
-              <option>早退</option>
-            </select>
+          <div class="att-action" stuNO={{student.stuNO}} appSetAttendance>
+            <span class="action-name" id="span{{student.stuNO}}">{{student.stuSex}}</span>
+            <ul class="form-control" id="ul{{student.stuNO}}">
+              <li>正常</li>
+              <li>迟到</li>
+              <li>严重迟到</li>
+              <li>旷课</li>
+              <li>早退</li>
+            </ul>
+            <div class="down-triangle"><span class="caret"></span></div>
           </div>
         </div>
       </td>

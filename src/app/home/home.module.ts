@@ -11,6 +11,7 @@ import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home.component';
 import { ClassInfoComponent } from './class-schedule/class-info/class-info.component';
 import { DragDropModule } from 'primeng/primeng';
+import { SetAttendanceDirective } from './class-schedule/att-seat/set-attendance.directive';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { DragDropModule } from 'primeng/primeng';
     AttSeatComponent,
     HomeComponent,        
     ClassBackgroundDirective,
+    SetAttendanceDirective,
   ],
   providers:[
     ClassScheduleService,
