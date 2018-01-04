@@ -3,11 +3,11 @@
   <table class="table">
     <tr *ngFor="let studentGroup of studentsList">
       <td *ngFor="let student of studentGroup">
-        <div class="student">
+        <div class="student" pDraggable="student" pDroppable="student" draggable="true" (onDragStart)="dragStart($event,student)" (onDrop)="drop($event)">
           <div class="name">{{student.stuName}}</div>
           <div class="no">{{student.stuNO}}</div>
           <div class="att-action" stuNO={{student.stuNO}} appSetAttendance>
-            <span class="action-name" id="span{{student.stuNO}}">{{student.stuSex}}</span>
+            <span class="action-name" id="span{{student.stuNO}}">{{attActionList[student.attStatus]}}</span>
             <ul class="form-control" id="ul{{student.stuNO}}">
               <li>正常</li>
               <li>迟到</li>
