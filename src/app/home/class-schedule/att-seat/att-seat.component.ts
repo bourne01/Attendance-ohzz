@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { ClassScheduleService } from '../class-schedule.service';
-import { Draggable}
 
 @Component({
   selector: 'app-att-seat',
@@ -11,7 +10,9 @@ import { Draggable}
 })
 export class AttSeatComponent implements OnInit {
   private studentsList:any[][]=[];
-  private attActionList:string[] = ['正常','迟到','严重迟到','旷课','早退']
+  private attActionList:string[] = ['正常','迟到','严重迟到','旷课','早退'];
+  private srcStuNO:string;
+  private tarStuNO:string;
   constructor(private studentService:ClassScheduleService) { }
 
   ngOnInit() {
@@ -35,11 +36,47 @@ export class AttSeatComponent implements OnInit {
       error => console.log(error)
     )
   }
+  /**
+   * 获取被拖动元素中的学生学号信息
+   * @param event ---拖动事件信息
+   * @param student ---被拖拽的学生信息
+   */
   dragStart(event,student){
     console.log('start dragging');
+    this.srcStuNO = student.stuNO;
   }
-  drop(event){
+  /**
+   * 一旦放置于目标区域，则完成座位等信息交换
+   * @param event ---拖动事件信息
+   * @param student ---被放置区域的学生信息
+   */
+  drop(event,student){
     console.log('Dropped');
+    this.tarStuNO = student.stuNO;
+    this.swapSeat(this.srcStuNO,this.tarStuNO);
+  }
+  /**
+   * 根据学生学号，找到学生在studentList数组的下标信息
+   * @param stuNO --学生学号
+   */
+  getStudent(stuNO:string){
+    for(let i in this.studentsList)
+      for(let j in this.studentsList[i]){
+        if(this.studentsList[i][j].stuNO == stuNO)
+          return i+'^'+j;
+      }
+  }
+  /**
+   * 完成交换信息
+   * @param _srcStuNO --源学生学号
+   * @param _tarStuNO --目标学生学号
+   */
+  swapSeat(_srcStuNO:string,_tarStuNO:string){
+    let [src1,src2]= this.getStudent(_srcStuNO).split('^');
+    let [tar1,tar2] = this.getStudent(_tarStuNO).split('^');
+    let srcStu = this.studentsList[src1][src2];
+    this.studentsList[src1][src2] = this.studentsList[tar1][tar2];
+    this.studentsList[tar1][tar2] = srcStu;  
   }  
 
 }

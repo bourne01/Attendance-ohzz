@@ -30,14 +30,16 @@ export class SetAttendanceDirective {
         sessionStorage.setItem('multiClick','true');
     }else{
       let lastUlObject:HTMLElement = document.getElementById('ul'+lastVisitedUlId);
-      lastUlObject.style.display = 'none';//关闭最近访问的ul列表
+      if(lastUlObject)
+        lastUlObject.style.display = 'none';//关闭最近访问的ul列表
       sessionStorage.removeItem('multiClick');//删除上次访问写入的值
       ulObject.style.display = 'block';
     }    
     sessionStorage.setItem('ulId',this.stuNO);
-    if(event.target.nodeName == "LI"){
+    console.log(event.srcElement.nodeName);
+    if(event.srcElement.nodeName == "LI"){
       let spanObjec:HTMLElement = document.getElementById('span'+this.stuNO);
-      spanObjec.innerText = event.target.innerText;
+      spanObjec.innerText = event.srcElement.innerHTML;
       ulObject.style.display = 'none';
     }    
   }

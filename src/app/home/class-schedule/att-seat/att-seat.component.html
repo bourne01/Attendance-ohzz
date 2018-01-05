@@ -3,7 +3,7 @@
   <table class="table">
     <tr *ngFor="let studentGroup of studentsList">
       <td *ngFor="let student of studentGroup">
-        <div class="student" pDraggable="student" pDroppable="student" draggable="true" (onDragStart)="dragStart($event,student)" (onDrop)="drop($event)">
+        <div class="student" pDraggable="student" pDroppable="student" draggable="true" (onDragStart)="dragStart($event,student)" (onDrop)="drop($event,student)">
           <div class="name">{{student.stuName}}</div>
           <div class="no">{{student.stuNO}}</div>
           <div class="att-action" stuNO={{student.stuNO}} appSetAttendance>
