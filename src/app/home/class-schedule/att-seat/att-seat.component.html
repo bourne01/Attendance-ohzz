@@ -1,4 +1,4 @@
-<app-class-info></app-class-info>
+<app-class-info [attAction]="attSum" (refresh)="getRefresh($event)"></app-class-info>
 <div class="classroom">
   <table class="table">
     <tr *ngFor="let studentGroup of studentsList">
@@ -9,11 +9,11 @@
           <div class="att-action" stuNO={{student.stuNO}} appSetAttendance>
             <span class="action-name" id="span{{student.stuNO}}">{{attActionList[student.attStatus]}}</span>
             <ul class="form-control" id="ul{{student.stuNO}}">
-              <li>正常</li>
-              <li>迟到</li>
-              <li>严重迟到</li>
-              <li>旷课</li>
-              <li>早退</li>
+              <li (click)='onClick($event,"正常")'>正常</li>
+              <li (click)='onClick($event,"迟到")'>迟到</li>
+              <li (click)='onClick($event,"严重迟到")'>严重迟到</li>
+              <li (click)='onClick($event,"旷课")'>旷课</li>
+              <li (click)='onClick($event,"早退")'>早退</li>
             </ul>
             <div class="down-triangle"><span class="caret"></span></div>
           </div>

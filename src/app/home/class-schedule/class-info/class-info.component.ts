@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {DragDropModule} from 'primeng/primeng';
 
@@ -15,6 +15,8 @@ export class ClassInfoComponent implements OnInit {
   private drag:string;
   private drop:string;
   constructor(private activatedRoute:ActivatedRoute,private router:Router) { }
+  @Input() attAction:string;
+  @Output() refresh = new EventEmitter<string>();
 
   ngOnInit() {
     let arrURL:string[] = this.router.url.split('/');
@@ -38,15 +40,10 @@ export class ClassInfoComponent implements OnInit {
     let routeParams =this.activatedRoute.snapshot.params;
     this.weekday = routeParams.weekday;
     this.classSeq = routeParams.classSeq;
-
+    console.log(this.attAction);
   }
-  dragStart(event,s:string){
-    this.drag = s;
-    console.log(this.drag);
+  onFresh(){
+    this.refresh.emit("Refresh");
   }
-  onDrop(event){
-    this.drop = this.drag;
-    console.log(this.drop);
-  } 
 
 }

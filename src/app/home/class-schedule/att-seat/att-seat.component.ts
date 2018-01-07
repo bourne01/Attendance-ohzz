@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { ClassScheduleService } from '../class-schedule.service';
+import { AttAction } from '../att-action.model';
 
 @Component({
   selector: 'app-att-seat',
@@ -10,9 +11,11 @@ import { ClassScheduleService } from '../class-schedule.service';
 })
 export class AttSeatComponent implements OnInit {
   private studentsList:any[][]=[];
-  private attActionList:string[] = ['正常','迟到','严重迟到','旷课','早退'];
+  private attActionList:string[] = ['正常','迟到','严重迟到','旷课','早退'];//考勤各种行为名称
   private srcStuNO:string;
   private tarStuNO:string;
+  private attAction:AttAction[] = [];
+  private attSum:string = '';
   constructor(private studentService:ClassScheduleService) { }
 
   ngOnInit() {
@@ -35,6 +38,18 @@ export class AttSeatComponent implements OnInit {
       },
       error => console.log(error)
     )
+  }
+  /**
+   * 提交服务器，设置考勤姓名名称
+   * @param event 
+   * @param action --考勤行为名称 
+   */
+  onClick(event,action:string){
+    console.log(event);
+    
+    this.studentService.setAttAction(action);
+    this.attSum = action;
+    console.log(this.attSum);
   }
   /**
    * 获取被拖动元素中的学生学号信息
@@ -77,6 +92,9 @@ export class AttSeatComponent implements OnInit {
     let srcStu = this.studentsList[src1][src2];
     this.studentsList[src1][src2] = this.studentsList[tar1][tar2];
     this.studentsList[tar1][tar2] = srcStu;  
+  }
+  getRefresh(refresh:string){
+    console.log(refresh);
   }  
 
 }

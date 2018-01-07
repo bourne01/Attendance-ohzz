@@ -38,8 +38,8 @@ export class SetAttendanceDirective {
     sessionStorage.setItem('ulId',this.stuNO);
     console.log(event.srcElement.nodeName);
     if(event.srcElement.nodeName == "LI"){
-      let spanObjec:HTMLElement = document.getElementById('span'+this.stuNO);
-      spanObjec.innerText = event.srcElement.innerHTML;
+      let spanObject:HTMLElement = document.getElementById('span'+this.stuNO);
+      spanObject.innerText = event.srcElement.innerHTML;
       ulObject.style.display = 'none';
     }    
   }

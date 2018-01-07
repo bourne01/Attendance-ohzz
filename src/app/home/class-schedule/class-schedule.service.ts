@@ -12,6 +12,9 @@ export class ClassScheduleService {
     console.log(this.scheduleURL);
     return this.http.get(this.scheduleURL)
   }
+  setAttAction(para:string){
+    console.log('Setting Attendance Action...'+para);
+  }
   /**
    * 获取学生列表
    */
