@@ -12,6 +12,7 @@ import { HomeComponent } from './home.component';
 import { ClassInfoComponent } from './class-schedule/class-info/class-info.component';
 import { DragDropModule } from 'primeng/primeng';
 import { SetAttendanceDirective } from './class-schedule/att-seat/set-attendance.directive';
+import { MySelectComponent } from './class-schedule/my-select/my-select.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import { SetAttendanceDirective } from './class-schedule/att-seat/set-attendance
     ClassInfoComponent,
     AttListComponent,
     AttSeatComponent,
-    HomeComponent,        
+    HomeComponent,
+    MySelectComponent,        
     ClassBackgroundDirective,
     SetAttendanceDirective,
   ],

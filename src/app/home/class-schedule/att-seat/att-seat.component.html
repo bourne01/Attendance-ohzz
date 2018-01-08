@@ -6,7 +6,7 @@
         <div class="student" pDraggable="student" pDroppable="student" draggable="true" (onDragStart)="dragStart($event,student)" (onDrop)="drop($event,student)">
           <div class="name">{{student.stuName}}</div>
           <div class="no">{{student.stuNO}}</div>
-          <div class="att-action" stuNO={{student.stuNO}} appSetAttendance>
+          <!-- <div class="att-action" stuNO={{student.stuNO}} appSetAttendance>
             <span class="action-name" id="span{{student.stuNO}}">{{attActionList[student.attStatus]}}</span>
             <ul class="form-control" id="ul{{student.stuNO}}">
               <li (click)='onClick($event,"正常")'>正常</li>
@@ -16,7 +16,8 @@
               <li (click)='onClick($event,"早退")'>早退</li>
             </ul>
             <div class="down-triangle"><span class="caret"></span></div>
-          </div>
+          </div> -->
+          <app-my-select stuNO={{student.stuNO}}></app-my-select>
         </div>
       </td>
     </tr>

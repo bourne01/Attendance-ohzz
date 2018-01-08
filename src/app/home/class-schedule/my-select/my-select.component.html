@@ -1,0 +1,11 @@
+<div class="att-action" stuNO={{stuNO}} appSetAttendance>
+  <span class="action-name" id="span{{stuNO}}">{{attActionList[0]}}</span>
+  <ul class="form-control" id="ul{{stuNO}}">
+    <li (click)='onClick($event,"正常")'>正常</li>
+    <li (click)='onClick($event,"迟到")'>迟到</li>
+    <li (click)='onClick($event,"严重迟到")'>严重迟到</li>
+    <li (click)='onClick($event,"旷课")'>旷课</li>
+    <li (click)='onClick($event,"早退")'>早退</li>
+  </ul>
+  <div class="down-triangle"><span class="caret"></span></div>
+</div>
