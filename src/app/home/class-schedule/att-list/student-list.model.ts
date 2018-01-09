@@ -1,7 +1,6 @@
 export interface Student{
-    sequence;
-    stuNO;
-    className;
-    stuName;
-
+    sequence?;
+    stuNO?;
+    _className?;
+    stuName?;
 }
