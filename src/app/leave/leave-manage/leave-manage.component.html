@@ -1,1 +1,68 @@
 <app-current-position></app-current-position>
+<div class="toolbar">
+    <div class="row filter-wrap">
+        <div class="col-lg-3 col-md-3 col-sm-3 trim-right-padding">
+            <label for="term">学期：</label>
+            <select class="form-control" id="term">
+                <option>2016年第一学期</option>
+                <option>2016年第二学期</option>
+            </select>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 trim-right-padding">
+            <label for="_class">班级：</label>
+            <select class="form-control" id="_class">
+                <option>201402黑板报设计与制作</option>
+                <option>201401黑板报设计与制作</option>
+            </select>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 trim-right-padding">
+            <label for="from">从：</label>
+            <select class="form-control">
+                <option>第25周</option>
+                <option>第25周</option>
+                <option>第25周</option>
+            </select>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 trim-right-padding">
+                <label for="from">从：</label>
+                <select class="form-control">
+                    <option>第25周</option>
+                    <option>第25周</option>
+                    <option>第25周</option>
+                </select>
+        </div>          
+    </div>        
+    <div class="row">
+            <div class="col-lg-1 col-md-1 col-sm-1">
+                <button class="btn btn-default query"><img src="assets/imgs/query.png">查询</button>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1">
+                    <a [routerLink]="['./note']"class="btn btn-default"><img src="assets/imgs/note.png">请假登记</a>
+            </div>
+    </div>
+</div>
+<div class="leave-list">
+    <p-dataTable [value]="leaveList" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]">
+        <p-column>
+            <ng-template pTemplate="header">
+                <span>序号</span>
+            </ng-template>
+            <ng-template pTemplate="body" let-i="rowIndex">
+                <span>{{i+1}}</span>
+            </ng-template>
+        </p-column>
+        <p-column field="stuNO" header="学号"></p-column>
+        <p-column field="_class" header="班级"></p-column>
+        <p-column field="type" header="类型"></p-column>
+        <p-column field="startTime" header="开始周次/星期/节次"></p-column>
+        <p-column field="endTime" header="结束周次/星期/节次"></p-column>
+        <p-column>
+            <ng-template pTemplate="header">
+                <span>操作</span>
+            </ng-template>
+            <ng-template pTemplate="body">
+                <button class="btn btn-default">删除</button>
+            </ng-template>
+        </p-column>
+    </p-dataTable>
+</div>

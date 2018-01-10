@@ -1,3 +1,101 @@
-<p>
-  leave-note works!
-</p>
+<app-current-position></app-current-position>
+<form>
+  <div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+      <label for="term">学期：</label>      
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3">
+      <select class="form-control">
+        <option>请选择学期</option>
+      </select>
+    </div>    
+  </div>
+  <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+        <label for="term">班级：</label>      
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <select class="form-control">
+          <option>请选择班级</option>
+        </select>
+      </div>    
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+          <label for="term">请假学生：</label>      
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <select class="form-control">
+            <option>请选择请假学生</option>
+          </select>
+        </div>    
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+        <label for="term">请假开始时间：</label>      
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        <select class="form-control">
+          <option>请选择周次</option>
+        </select>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        <select class="form-control">
+          <option>请选择星期几</option>
+         </select>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        <select class="form-control">
+          <option>请选择节次</option>
+        </select>
+      </div>    
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+          <label for="term">结束开始时间：</label>      
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2">
+          <select class="form-control">
+            <option>请选择周次</option>
+          </select>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2">
+          <select class="form-control">
+            <option>请选择星期几</option>
+           </select>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2">
+          <select class="form-control">
+            <option>请选择节次</option>
+          </select>
+        </div>    
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+          <label for="leave-type">请假类型：</label>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1">
+            <label class="radio-inline">
+                <input type="radio" name="leaveName" id="inlineRadio1" value="option1"> 事假
+            </label> 
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1">
+            <label class="radio-inline">
+                <input type="radio" name="leaveName" id="inlineRadio1" value="option1"> 病假
+            </label> 
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1">
+            <label class="radio-inline">
+                <input type="radio" name="leaveName" id="inlineRadio1" value="option1"> 其它
+            </label> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+            <label for="leave-reason">请假原因：</label>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-5">
+            <textarea class="form-control" rows="5"></textarea>
+        </div>
+    </div>
+</form>

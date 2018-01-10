@@ -38,6 +38,9 @@ export class CurrentPositionComponent implements OnInit {
       case 'leave':
         this.isLeave = true;
         break;
+      case 'note':
+        this.isLeaveNote = true;
+        break;
       case 'swap-leave':
         this.isSwapLeave = true;
         break;

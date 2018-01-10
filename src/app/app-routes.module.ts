@@ -28,7 +28,7 @@ export const appRoutes:Routes = [
   },
   {
     path:'leave',
-    component:LeaveManageComponent
+    component:'app/leave/leave.module#LeaveModule'
   },
   {
     path:'attendance',
