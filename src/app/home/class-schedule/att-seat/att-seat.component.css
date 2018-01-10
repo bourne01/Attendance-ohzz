@@ -18,36 +18,3 @@ td{
 .student .no{
     background-color: #e3eef7;
 }
-.att-action{
-    height:2rem;
-    line-height: 2rem;
-    border: 1px solid #e3eef7;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    position: relative;
-}
-ul{
-    padding:0px;
-    list-style-type:none;
-    height: 2rem;
-    display:none;
-    position:absolute;
-    top:2rem;
-    z-index: 10000;
-}
-li{
-    height:2rem;
-    line-height:2rem;
-    background-color:#fff;
-}
-li:hover{
-    background-color: #337ab7;
-    color:#fff;
-}
-div.down-triangle{
-    height:2rem;
-    line-height:2rem;
-    position: absolute;
-    top: 0rem;
-    right: 0.5rem;
-}

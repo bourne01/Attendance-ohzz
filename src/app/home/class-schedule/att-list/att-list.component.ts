@@ -32,5 +32,17 @@ export class AttListComponent implements OnInit {
       error => console.log(error)
     )
   }
-
+  onClick(){
+    
+  }
+  paginate(event) {
+    //event.first = Index of the first record
+    //event.rows = Number of rows to display in new page
+    //event.page = Index of the new page
+    //event.pageCount = Total number of pages
+    console.log(event.first);
+    console.log(event.rows);
+    console.log(event.page);
+    console.log(event.pageCount);this.students = [];
+}
 }

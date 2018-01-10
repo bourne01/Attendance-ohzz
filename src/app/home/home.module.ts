@@ -10,7 +10,7 @@ import { ClassBackgroundDirective } from './class-schedule/class-background.dire
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home.component';
 import { ClassInfoComponent } from './class-schedule/class-info/class-info.component';
-import { DragDropModule, DataTableModule } from 'primeng/primeng';
+import { DragDropModule, DataTableModule, PaginatorModule } from 'primeng/primeng';
 import { SetAttendanceDirective } from './class-schedule/att-seat/set-attendance.directive';
 import { MySelectComponent } from './class-schedule/my-select/my-select.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     DragDropModule,
     HomeRoutesModule,
     DataTableModule,
+    PaginatorModule,
     BrowserAnimationsModule
   ],
   exports:[

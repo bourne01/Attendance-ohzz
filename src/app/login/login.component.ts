@@ -11,9 +11,11 @@ export class LoginComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit() {
-    localStorage.setItem('isLogin','true')
+    //sessionStorage.setItem('isLogin','true')
+    console.log("I M login");
   }
   onClick(){
-    location.href = 'home';
+    sessionStorage.setItem('isLogin','false');//如果登录成功，则显示标题和左侧导航条
+    location.href = 'home';//跳转到主页
   }
 }

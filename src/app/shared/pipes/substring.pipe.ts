@@ -13,7 +13,7 @@ export class SubstringPipe implements PipeTransform {
     if(args){
       maxStrKeepLength = args;
     }
-    console.log(maxStrKeepLength);
+    //console.log(maxStrKeepLength);
     for(let i=0;i<charTotal;i++){
       if(strKeepLength < maxStrKeepLength){
         let num = this.isChinese(value[i])?2:1;

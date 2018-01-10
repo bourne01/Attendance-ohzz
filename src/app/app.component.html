@@ -1,8 +1,8 @@
-<app-header></app-header>
+<app-header *ngIf="isLogined"></app-header>
 <div class="container content">
     <div class="row">
-        <div class="col-lg-2 col-md-2 col-sm-2 left">
-            <app-navbar-side></app-navbar-side>
+        <div class="col-lg-2 col-md-2 col-sm-2 left" *ngIf="isLogined">
+            <app-navbar-side ></app-navbar-side>
         </div>
         <div class="col-lg-10 col-md-10 col-sm-10 right">
             <router-outlet></router-outlet>

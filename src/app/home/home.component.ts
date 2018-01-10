@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    
+    //sessionStorage.removeItem('isLogin');//登录到主页后，恢复登录组件初始状态
   }
   onClick(){
   }

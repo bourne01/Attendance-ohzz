@@ -31,8 +31,6 @@ div.down-triangle{
     top: 0rem;
     right: 0.5rem;
 }
-.__right{
-    text-align:right;
-    font-size:18px;
-    color:red;
+.att-list{
+    margin-top:2rem;
 }

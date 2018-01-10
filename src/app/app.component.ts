@@ -14,8 +14,14 @@ export class AppComponent {
   } */
   isLogined:boolean = false ;
   ngOnInit(){
-    console.log('App starting...'+localStorage.getItem('isLogin'));
-    this.isLogined = localStorage.getItem('isLogin') == 'false';
+    /* let isFirstLogin = sessionStorage.getItem('isFirstLogin') == 'true';
+    if(isFirstLogin){
+      
+    }else{
+      sessionStorage.setItem('isFirstLogin','true');
+    }
+    console.log(typeof sessionStorage.getItem('isLogin'));  */   
+    this.isLogined = sessionStorage.getItem('isLogin') == 'false';//当用户未登录或登录超时，登录组件则隐藏头部组件和左侧导航条
   }
   
 }

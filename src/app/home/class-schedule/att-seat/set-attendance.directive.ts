@@ -37,6 +37,7 @@ export class SetAttendanceDirective {
     }    
     sessionStorage.setItem('ulId',this.stuNO);
     console.log(event.srcElement.nodeName);
+    console.log(event);
     if(event.srcElement.nodeName == "LI"){
       let spanObject:HTMLElement = document.getElementById('span'+this.stuNO);
       spanObject.innerText = event.srcElement.innerHTML;
