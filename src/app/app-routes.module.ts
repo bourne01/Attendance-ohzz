@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LeaveManageComponent } from './leave/leave-manage/leave-manage.component';
 import { AttendanceComponent } from './attendance/attendance/attendance.component';
 import { AppComponent } from './app.component';
+import { LogoutComponent } from './logout/logout.component';
 
 export const appRoutes:Routes = [
   {
@@ -17,6 +18,10 @@ export const appRoutes:Routes = [
   {
     path:'login',
     component:LoginComponent  
+  },
+  {
+    path:'logout',
+    component:LogoutComponent  
   },
   {
     path:'home',

@@ -23,12 +23,15 @@ import { AttendanceReportComponent } from './attendance/attendance-report/attend
 import { SwapLeaveComponent } from './swap/swap-leave/swap-leave.component';
 import { SwapClassComponent } from './swap/swap-class/swap-class.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LogoutComponent } from './logout/logout.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    LogoutComponent,
     PageNotFoundComponent,
     //HomeComponent,
     //CurrentPositionComponent,
@@ -46,6 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HomeModule,
+    FormsModule,
     HttpClientModule,
     LeaveModule,
     AttendanceModule,

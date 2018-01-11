@@ -14,8 +14,9 @@ export class LoginComponent implements OnInit {
     //sessionStorage.setItem('isLogin','true')
     console.log("I M login");
   }
-  onClick(){
+  onSubmit(value:any){
+    console.log(value);
     sessionStorage.setItem('isLogin','false');//如果登录成功，则显示标题和左侧导航条
-    location.href = 'home';//跳转到主页
+    //location.href = 'home';//跳转到主页
   }
 }
