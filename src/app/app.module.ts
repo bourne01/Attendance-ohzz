@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
 import { HomeModule } from './home/home.module';
 import { RouterModule } from '@angular/router';
 import { AppRoutesModule } from './app-routes.module';
@@ -13,7 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { LeaveManageComponent } from './leave/leave-manage/leave-manage.component';
 import { NavbarSideComponent } from './shared/components/navbar-side/navbar-side.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-//import { CurrentPositionComponent } from './shared/components/current-position/current-position.component';
 import { AttendanceModule } from './attendance/attendance.module';
 import { AttendanceComponent } from './attendance/attendance/attendance.component';
 import { SwapModule } from './swap/swap.module';
@@ -23,8 +20,9 @@ import { AttendanceReportComponent } from './attendance/attendance-report/attend
 import { SwapLeaveComponent } from './swap/swap-leave/swap-leave.component';
 import { SwapClassComponent } from './swap/swap-class/swap-class.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LogoutComponent } from './logout/logout.component';
 import { FormsModule } from '@angular/forms';
+import { LogoutComponent } from './user/logout/logout.component';
+import { LoginComponent } from './user/login/login.component';
 
 
 @NgModule({
@@ -33,17 +31,8 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     LogoutComponent,
     PageNotFoundComponent,
-    //HomeComponent,
-    //CurrentPositionComponent,
-    //LeaveManageComponent,
-    //AttendanceComponent,
-    //SwapComponent,    
     NavbarSideComponent,
     HeaderComponent,
-    //AttendanceManageComponent,
-    //AttendanceReportComponent,
-    //SwapLeaveComponent, 
-    //SwapClassComponent,
       
   ],
   imports: [

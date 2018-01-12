@@ -50,6 +50,9 @@ header{
     padding-bottom:11px;
     font-family:Microsoft Yahei
 }
+.head .datetime a{
+    color:#fff;
+}
 .logout{
     cursor:pointer;
     text-decoration: underline;

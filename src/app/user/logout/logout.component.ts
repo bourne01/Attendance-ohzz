@@ -10,7 +10,7 @@ export class LogoutComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    sessionStorage.removeItem('isLogin');//登录到主页后，恢复登录组件初始状态
+    sessionStorage.removeItem('isLogin');//恢复登录组件初始状态
     location.href = 'login';
   }
 
