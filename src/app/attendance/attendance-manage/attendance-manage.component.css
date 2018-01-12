@@ -1,0 +1,17 @@
+.form-control{
+    width:80%;
+    display: inline-block;
+}
+.trim-right-padding{
+    padding-right:0;
+}
+.toolbar .row{
+    margin-top:1rem;
+}
+button.query{
+    background-color: #49a1f9;
+    color:#fff;
+}
+.att-list{
+    margin-top:1rem;
+}

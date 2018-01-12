@@ -7,12 +7,14 @@ import { AttendanceRoutesModule } from './attendance-routes.module';
 import { AttendanceComponent } from './attendance/attendance.component';
 import { CurrentPositionComponent } from '../shared/components/current-position/current-position.component';
 import { SharedModule } from '../shared/shared.module';
+import { DataTableModule } from 'primeng/primeng';
 
 @NgModule({
   imports: [
     CommonModule,
     AttendanceRoutesModule,
     RouterModule,
+    DataTableModule,
     SharedModule
   ],
   declarations: [            
