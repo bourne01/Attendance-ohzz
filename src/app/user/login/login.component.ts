@@ -8,12 +8,12 @@ import { User } from '../user.model';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  private user:User;
+  private user:User = {};
   constructor(private router:Router) { }
 
   ngOnInit() {
     console.log("I M login");
-    
+    console.log(this.user);
     if(localStorage.getItem('username')){
       this.user = new User(localStorage.getItem('username'),localStorage.getItem('password'));
     }

@@ -7,4 +7,5 @@ div.left{
 }
 div.right{
     padding:0;
+    position: static;
 }

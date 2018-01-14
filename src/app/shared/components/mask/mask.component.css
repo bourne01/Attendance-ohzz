@@ -1,0 +1,10 @@
+.mask{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    opacity: 0.5;
+    background-color: #000;
+    width:100vw;
+    height:100vh;
+}

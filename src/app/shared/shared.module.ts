@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { ToCnNumberPipe } from './pipes/to-cn-number.pipe';
 import { CurrentPositionComponent } from './components/current-position/current-position.component';
 import { SubstringPipe } from './pipes/substring.pipe';
+import { MaskComponent } from './components/mask/mask.component';
 
 @NgModule({
   imports: [
@@ -13,11 +14,13 @@ import { SubstringPipe } from './pipes/substring.pipe';
   declarations: [
     ToCnNumberPipe,
     CurrentPositionComponent,
-    SubstringPipe
+    SubstringPipe,
+    MaskComponent
   ],
   exports:[
     ToCnNumberPipe,
     CurrentPositionComponent,
+    MaskComponent,
     SubstringPipe
     
   ]

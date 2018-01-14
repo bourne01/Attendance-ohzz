@@ -34,10 +34,6 @@ header{
 .container{
     padding:0px;
 }
-.head a{
-    display: inline-block;
-    height:80px;
-}
 .head h5{
     margin:0;
     color:#fff;
@@ -50,7 +46,7 @@ header{
     padding-bottom:11px;
     font-family:Microsoft Yahei
 }
-.head .datetime a{
+.head .wel-txt a{
     color:#fff;
 }
 .logout{

@@ -8,6 +8,7 @@ import { AttendanceComponent } from './attendance/attendance.component';
 import { CurrentPositionComponent } from '../shared/components/current-position/current-position.component';
 import { SharedModule } from '../shared/shared.module';
 import { DataTableModule } from 'primeng/primeng';
+import { AttService } from './att.service';
 
 @NgModule({
   imports: [
@@ -21,6 +22,9 @@ import { DataTableModule } from 'primeng/primeng';
     AttendanceComponent,
     AttendanceManageComponent,
     AttendanceReportComponent
+  ],
+  providers:[
+    AttService
   ]
 })
 export class AttendanceModule { }
