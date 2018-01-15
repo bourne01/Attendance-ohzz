@@ -31,6 +31,7 @@ button.query{
     z-index: 100;
     top:50%;
     left:50%;
+    height:0;
 }
 .popwin{
     padding:0 15px 20px;

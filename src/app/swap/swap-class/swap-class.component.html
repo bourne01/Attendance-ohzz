@@ -1,1 +1,76 @@
 <app-current-position></app-current-position>
+<div class="swap">
+    <div class="row swap-type">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <label for="term">学期：</label>
+            <select class="form-control term" id="term">
+                <option>请选择学期</option>
+            </select>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <label for="type">类型：</label>
+            <label class="radio-inline">
+                    <input type="radio" name="leaveName" id="inlineRadio1" value="option1"> 事假
+            </label> 
+            <label class="radio-inline">
+                    <input type="radio" name="leaveName" id="inlineRadio1" value="option1"> 事假
+            </label> 
+        </div>
+    </div>
+    <div class="row swap-teacher">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <label for="out-teacher">调课老师：</label>
+            <select class=" form-control" id="out-teacher">
+                <option>请选择老师</option>
+            </select>
+            <label for="out-week">周次：</label>
+            <select class=" form-control" id="out-teacher" [(ngModel)]="outWeek" (change)="selectOutWeek(outWeek)">
+                <option value="-1">请选择周次</option>
+                <option *ngFor="let week of weekList" [value]="week">第{{week}}周</option>
+            </select>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <label for="out-teacher">被调老师：</label>
+            <select class=" form-control" id="in-teacher">
+                <option>请选择老师</option>
+            </select>
+            <label for="out-week">周次：</label>
+            <select class=" form-control" id="in-teacher" #select (change)="selectInWeek(select.value)">
+                <option value="-1">请选择周次</option>
+                <option *ngFor="let week of weekList" [value]="week">第{{week}}周</option>
+            </select>
+        </div>
+    </div>
+    <div class="schedule-table">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <td>课序</td>
+                    <td>周一</td>
+                    <td>周二</td>
+                    <td>周三</td>
+                    <td>周四</td>
+                    <td>周五</td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <td>课序</td>
+                    <td>周一</td>
+                    <td>周二</td>
+                    <td>周三</td>
+                    <td>周四</td>
+                    <td>周五</td>
+                </tr>
+                <tr>
+                    
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

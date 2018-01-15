@@ -1,0 +1,25 @@
+.swap-type{
+    margin-top:1rem;
+}
+.term{
+    display:inline;
+    width:80%;
+}
+.radio-inline{
+    height: 34px;
+    line-height: 34px;
+}
+.radio-inline input[type="radio"]{
+    position: static;
+}
+.swap-teacher{
+    margin-top:1rem;
+}
+.schedule-table {
+    margin-top:1rem;
+    margin-left: -15px;
+}
+.swap-teacher .form-control{
+    display: inline-block;
+    width:30%;
+}
